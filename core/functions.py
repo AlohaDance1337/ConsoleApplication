@@ -32,7 +32,7 @@ def dif(a:int|float=None,b:int|float=None)->int|float:
     else: raise TypeError("Тип переменной должен быть int")  
 
 def sqrt(a:int|float=None)->int|float:
-    if type(a)==int:
+    if type(a)==int or type(a)==float:
         return math.sqrt(a)
     else: raise TypeError("Тип переменной должен быть int") 
 
