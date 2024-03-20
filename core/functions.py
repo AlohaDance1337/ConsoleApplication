@@ -1,78 +1,48 @@
 import math
 
 def sum(a:int|float=None,b:int|float=None)->int|float:
-    if isinstance(a,(float,int)) and isinstance(b,(float,int)):
-        return a+b
-    else: raise TypeError("Тип переменной должен быть int")
+    return a+b
 
 def mul(a:int|float=None,b:int|float=None)->int|float:
-    if isinstance(a,(float,int)) and isinstance(b,(float,int)):
-        return a*b
-    else: raise TypeError("Тип переменной должен быть int")
+    return a*b
 
 def div(a:int|float=None,b:int|float=None)->int|float:
-    if isinstance(a,(float,int)) and isinstance(b,(float,int)):
-        try:
-            return a/b
-        except ZeroDivisionError:
-            print("Делить на ноль нельзя")
-    else: raise TypeError("Тип переменной должен быть int")
+    try:
+        return a/b
+    except ZeroDivisionError:
+        print("Делить на ноль нельзя")
 
 def div_ex(a:int|float=None,b:int|float=None)->int|float:
-    if isinstance(a,(float,int)) and isinstance(b,(float,int)):   
-        try:
-            return a//b
-        except ZeroDivisionError:
-            print("Делить на ноль нельзя")
-    else: raise TypeError("Тип переменной должен быть int")    
+    try:
+        return a//b
+    except ZeroDivisionError:
+        print("Делить на ноль нельзя")
 
 def dif(a:int|float=None,b:int|float=None)->int|float:
-    if isinstance(a,(float,int)) and isinstance(b,(float,int)): 
-        return a-b
-    else: raise TypeError("Тип переменной должен быть int")  
+    return a-b
 
 def sqrt(a:int|float=None)->int|float:
-    if isinstance(a,(float,int)) and isinstance(b,(float,int)):
-        return math.sqrt(a)
-    else: raise TypeError("Тип переменной должен быть int") 
+    return math.sqrt(a)
 
 def exp(a:int|float=None)->int|float:
-    if isinstance(a,(float,int)):
-        return math.exp(a)
-    else: raise TypeError("Тип переменной должен быть int") 
-
-def module(a:int|float=None)->int|float:
-    if isinstance(a,(float,int)):
-        return abs(a)
-    else: raise TypeError("Тип переменной должен быть int") 
+    return math.exp(a)
 
 def factorial(a:int=None)->int|float:
-    if isinstance(a,(float,int)):
-        if a==1:
-            return 1
-        return factorial(a-1)*a
-    else: raise TypeError("Тип переменной должен быть int") 
+    if a==1:
+        return 1
+    return factorial(a-1)*a
 
 def log(a:int|float=None,b:int=None)->int|float:
-    if isinstance(a,(float,int)) and isinstance(b,(float,int)):
-        if(b!=0 and b>0) and (a!=1 and a>0):
-            return math.log(b,a)
-        else: raise ValueError("Основание логарифма не может быть равно нулю или число меньше нуля")
+    return math.log(b,a)
     
 def ln(a:int|float=None)->float:
-    if a!=0 and a>0:
-        return math.log(a,math.e)
-    else: raise ValueError("Основание логарифма не может быть равно нулю")
+    return math.log(a,math.e)
 
 def fibonacci(a:int=None)->int:
-    if isinstance(a,(float,int)):
-        if a<=2:
-            return 1
-        return fibonacci(a-1)+fibonacci(a-2)
-    else: raise TypeError("Тип переменной должен быть int")
+    if a<=2:
+        return 1
+    return fibonacci(a-1)+fibonacci(a-2)
 
 def pow(a:int|float=None,b:int=None)->int|float:
-    if isinstance(a,(float,int)):
         return math.pow(a,b)
-    else: raise TypeError("Тип переменной должен быть int")
 
